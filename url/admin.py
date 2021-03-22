@@ -1,3 +1,12 @@
 from django.contrib import admin
+from .models import ShortUrl
 
-# Register your models here.
+
+# Custom ShortUrl adming page
+
+class ShortUrlAdmin(admin.ModelAdmin):
+
+	list_display = ('url', 'clicks')
+
+
+admin.site.register(ShortUrl, ShortUrlAdmin)
