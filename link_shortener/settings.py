@@ -54,6 +54,9 @@ INSTALLED_APPS = [
 
     # Own app
     'url',
+
+    # Api for URLs
+    'url_api',
 ]
 
 # CORS SETTINGS
