@@ -7,5 +7,5 @@ app_name = 'url'
 
 
 urlpatterns = [
-	path('<str:code>/', redirected, name='redirected'),
+	path('<str:code>/', redirected, name='redirected-page'),
 ]

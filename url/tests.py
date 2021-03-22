@@ -1,5 +1,6 @@
 from django.test import TestCase
 from .models import ShortUrl
+from django.urls import reverse
 
 
 class TestShortUrl(TestCase):
@@ -37,3 +38,12 @@ class TestShortUrl(TestCase):
 		url.click()
 
 		self.assertEqual(url.clicks, 1)
+
+	def test_redirect(self):
+
+		obj = ShortUrl.objects.get(id=1)
+
+		url = reverse('url:redirected-page', kwargs={'code': f"{obj.short_url}"})
+		response = self.client.get(url)
+
+		self.assertRedirects(response, f"{obj.url}", fetch_redirect_response=False)
