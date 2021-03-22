@@ -51,6 +51,9 @@ INSTALLED_APPS = [
 
     # Cross-Origin Resource Sharing
     'corsheaders',
+
+    # Own app
+    'url',
 ]
 
 # CORS SETTINGS
