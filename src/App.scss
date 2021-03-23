@@ -1,0 +1,11 @@
+html, body {
+	min-height: 100 vh;
+	background-color: #52CDC3;
+}
+
+.App {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	width: 100%;
+}

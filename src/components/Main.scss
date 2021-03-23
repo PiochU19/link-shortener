@@ -1,0 +1,98 @@
+.Main {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 320px;
+	height: 80%;
+}
+
+@font-face {
+  font-family: IndieFlower;
+  src: url("../assets/fonts/IndieFlower.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: NewTegomin;
+  src: url("../assets/fonts/NewTegomin.ttf") format("truetype");
+}
+
+$primary: #026775;
+$secondary: #750E43;
+$white: #fff;
+$gray: #fff;
+.Form__group {
+  position: relative;
+  padding: 15px 0 0;
+  margin-top: 10px;
+  width: 50%;
+}
+
+.Form__field {
+  font-family: NewTegomin;
+  width: 100%;
+  border: 0;
+  border-bottom: 2px solid $gray;
+  outline: 0;
+  font-size: 1.3rem;
+  color: $white;
+  padding: 7px 0;
+  background: transparent;
+  transition: border-color 0.2s;
+
+  &::placeholder {
+    color: transparent;
+  }
+
+  &:placeholder-shown ~ .Form__label {
+    font-size: 1.7rem;
+    cursor: text;
+    top: 20px;
+  }
+}
+
+.Form__label {
+  position: absolute;
+  top: 0;
+  display: block;
+  transition: 0.2s;
+  font-size: 1rem;
+  color: $gray;
+}
+
+.Form__field:focus {
+  ~ .Form__label {
+    position: absolute;
+    top: 0;
+    display: block;
+    transition: 0.2s;
+    font-size: 1rem;
+    color: $primary;
+    font-weight:700;    
+  }
+  padding-bottom: 6px;  
+  font-weight: 700;
+  border-width: 3px;
+  border-image: linear-gradient(to right, $primary,$secondary);
+  border-image-slice: 1;
+}
+/* reset input */
+.Form__field{
+  &:required,&:invalid { box-shadow:none; }
+}
+
+.Form__label {
+	font-family: NewTegomin;
+}
+
+.Short-url {
+  position: fixed;
+  margin-top: -200px;
+}
+
+a {
+  text-decoration: none;
+  font-family: NewTegomin;
+  font-size: 40px;
+  color: #026775;
+}

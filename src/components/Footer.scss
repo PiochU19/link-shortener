@@ -1,0 +1,25 @@
+@font-face {
+  font-family: IndieFlower;
+  src: url("../assets/fonts/IndieFlower.ttf") format("truetype");
+}
+
+.Footer {
+	margin-left: 42%;
+	font-family: IndieFlower;
+	font-size: 10px;
+	color: #026775;
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+}
+
+.BoatImg {
+	margin-left: 20%;
+	display: inline-block;
+	margin-bottom: -2.5%;
+}
+
+.FooterText {
+	display: inline-block;
+}
