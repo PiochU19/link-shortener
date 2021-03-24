@@ -1,0 +1,23 @@
+version: "3.9"
+
+services:
+
+  db:
+    image: postgres
+    container_name: db
+    environment:
+      - POSTGRES_HOST_AUTH_METHOD=trust
+      - POSTGRES_DB=link-shortener
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=admin
+
+  django:
+    build: .
+    container_name: django
+    command: python /code/manage.py runserver 0.0.0.0:8000
+    volumes:
+      - .:/code
+    ports:
+      - "8000:8000"
+    depends_on:
+      - db
