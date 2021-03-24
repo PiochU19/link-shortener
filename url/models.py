@@ -29,7 +29,7 @@ def url_validation(url):
 
 class ShortUrl(models.Model):
 	short_url 		= models.CharField(max_length=5, blank=True)
-	url 			= models.CharField(max_length=255)
+	url 			= models.URLField(max_length=255)
 	clicks			= models.IntegerField(default=0)
 
 	def save(self, *args, **kwargs):
