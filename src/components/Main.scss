@@ -88,6 +88,9 @@ $gray: #fff;
 .Short-url {
   position: fixed;
   margin-top: -200px;
+  font-family: NewTegomin;
+  font-size: 40px;
+  color: #026775;
 }
 
 a {
@@ -95,4 +98,12 @@ a {
   font-family: NewTegomin;
   font-size: 40px;
   color: #026775;
+}
+
+.Link-below {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  color: white;
+  font-size: 20px;
 }

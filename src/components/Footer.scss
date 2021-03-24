@@ -4,22 +4,31 @@
 }
 
 .Footer {
-	margin-left: 42%;
 	font-family: IndieFlower;
 	font-size: 10px;
 	color: #026775;
 	position: fixed;
 	left: 0;
 	bottom: 0;
-	width: 100%;
+	min-width: 100%;
+	display: flex;
+	align-items: center;
 }
 
 .BoatImg {
-	margin-left: 20%;
-	display: inline-block;
-	margin-bottom: -2.5%;
+	float: right;
+	position: absolute;
+	left: 75%;
+	bottom: 5%;
 }
 
 .FooterText {
-	display: inline-block;
+	bottom: 5%;
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+img {
+	width: 13vw;
 }
