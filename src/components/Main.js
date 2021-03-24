@@ -15,7 +15,7 @@ const Main = () => {
 	const handleSubmit = async e => {
     	e.preventDefault()
     	try {
-    		const request = await fetch(`http://localhost:8000/api/create/`, {
+    		const request = await fetch(process.env.REACT_APP_API_ENDPOINT, {
     			method: 'POST',
     			headers: {
                 	'Accept': 'application/json, text/plain',
