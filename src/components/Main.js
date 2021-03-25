@@ -15,7 +15,7 @@ const Main = () => {
 	const handleSubmit = async e => {
     	e.preventDefault()
     	try {
-    		const request = await fetch(process.env.REACT_APP_API_ENDPOINT, {
+    		const request = await fetch(`https://link-shortener-django.herokuapp.com/create/`, {
     			method: 'POST',
     			headers: {
                 	'Accept': 'application/json, text/plain',
