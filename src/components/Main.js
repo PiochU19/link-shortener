@@ -31,7 +31,7 @@ const Main = () => {
       		const stat = request.status;
 
       		if (stat === 201) {
-				set_short_url('localhost:8000/'+ response.short_url);
+				set_short_url('link-shortener-django.herokuapp.com/'+ response.short_url);
 				set_copied("");
       		} else if (stat === 400) {
       			set_short_url("");
