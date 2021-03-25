@@ -6,4 +6,6 @@ Frontend based on React.
 
 [Live here](https://dompio.herokuapp.com/)
 
-Because it's hosted on free heroku, it's rather longener than shortener.
+Main goal is to show how it's working.
+
+Because it's hosted on free heroku, it's rather longener than shortener. 
