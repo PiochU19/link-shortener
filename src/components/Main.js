@@ -30,14 +30,18 @@ const Main = () => {
 
       		const stat = request.status;
 
-      		if (stat == 201) {
+      		if (stat === 201) {
 				set_short_url('localhost:8000/'+ response.short_url);
 				set_copied("");
-      		} else if (stat == 400) {
+      		} else if (stat === 400) {
       			set_short_url("");
       			set_copied("");
       			set_error('Enter valid URL');
-      		}
+      		} else if (stat === 429) {
+            set_short_url("");
+            set_copied("");
+            set_error('You can only make 10 short URLs per day');
+          }
 
     	} catch (error) {
     		e.target.reset();
@@ -62,11 +66,11 @@ const Main = () => {
 	return (
 		<div className='Main'>
 
-			{ short_url ? <div className='Short-url'>{ copied ? <span className='Link-below'>Copied!</span> : <span className='Link-below'>Click link below to copy</span> } <br /><a href="#" onClick={copy_to_clipboard}>{short_url}</a></div> : <div className='Short-url'>{err_msg}</div> }
+			{ short_url ? <div className='Short-url'>{ copied ? <span className='Link-below'>Copied!</span> : <span className='Link-below'>Click link below to copy</span> } <br /><button onClick={copy_to_clipboard}>{short_url}</button></div> : <div className='Short-url'>{err_msg}</div> }
 			<div className='Form__group Field'>
 				<form onSubmit={handleSubmit}>
 					<input className='Form__field' type='text' id='url' placeholder='URL' onChange={handleChange} />
-					<label for='url' className='Form__label'>URL</label>
+					<label htmlFor='url' className='Form__label'>URL</label>
 				</form>
 			</div>
 		</div>

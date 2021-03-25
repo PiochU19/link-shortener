@@ -8,7 +8,7 @@ const Footer = () => {
 				<h1>© Dominik Pioś 2021</h1>
 			</div>
 			<div className='BoatImg'>
-				<img src={boat} />
+				<img src={boat} alt='BoatImg' />
 			</div>
 		</div>
 	);
